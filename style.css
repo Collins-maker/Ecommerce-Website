@@ -1,0 +1,282 @@
+*{
+  padding: 0;
+margin: 0;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+}
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nav-bar{
+  background-color: lightblue;
+  /* height: 100px; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+form{
+  display: block;
+  margin: auto 10px;
+}
+form input{
+  padding: 0.5em;
+}
+form button{
+  padding: 0.4em;
+}
+.details{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+  margin-right: 1em;
+}
+
+.cart{
+  padding: auto 0.4em;
+  align-items: center;
+}
+.user{
+  padding: auto 0.4em;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+  margin: 10px auto;
+ 
+}
+
+.hero-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1.2em auto;
+}
+.hero-section img{
+  width: 60%;
+}
+.hero-section h2{
+  font-size: 3em;
+  width: 30%;
+}
+
+.all-products{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.popup_pro_container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup_pro_content {
+  background-color: #fff;
+  padding: 20px;
+  width: 50%;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup_pro_content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.popup_pro_content h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.popup_pro_content p {
+  margin-bottom: 5px;
+}
+
+
+
+.popup-container {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(233, 217, 217, 0.5);
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 50px;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.cart-item img{
+
+  width: 30px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+.cart-item>h4{
+  /* font-weight:bold; */
+  font-size: 10px;
+}
+
+.cart-item>p{
+  height: fit-content;
+  width: fit-content;
+  font-size: 10px;
+}
+.cart-item button{
+  font-size: 10px;
+}
+
+.product-price {
+  margin-bottom: 2px;
+}
+
+/* .product-quantity {
+ 
+} */
+
+.product-total {
+  font-weight: bold;
+  font-size: small;
+  margin-bottom: 10px;
+}
+
+.total-price {
+  font-weight:bold ;
+  margin-top: 10px;
+}
+
+
+
+.product{
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px 1px #e5e3e3;
+  
+  transition: .3s ease-in-out;
+}
+
+.product:hover{
+  transform: scale(1.02);
+}
+
+.product img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.product h4{
+  color: #794c23;
+  font-size: .8em;
+  margin-bottom: .75em;
+  padding: .5em;
+}
+
+.product>span{
+  text-transform: capitalize;
+  padding: .5em;
+}
+
+p{
+  padding: .5em;
+}
+
+p>span{
+  color: #f3861d;
+}
+
+@media screen and (max-width: 900px) {
+  .products{
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .products{
+      grid-template-columns: repeat(2, 1fr);
+      
+  }
+
+  .hero-section{
+      flex-direction: column;
+  }
+
+  .hero-section h2{
+      width: 100%;
+  }
+  .hero-section img{
+    width: 100%;
+}
+}
